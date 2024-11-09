@@ -79,7 +79,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans     &trans   &trans  &trans  &trans
-                        &trans  &trans  &mo 1     &kp LEFT_ARROW  &unpicked  &picked
+                        &trans  &trans  &to 1     &kp LEFT_ARROW  &unpicked  &picked
             >;
         };
     };
