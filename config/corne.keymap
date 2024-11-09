@@ -14,14 +14,14 @@
         picked: picked {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_5 &kp RIGHT>;
+            bindings = <&kp KP_NUMBER_5 &kp P &kp RIGHT>;
             label = "PICKED";
         };
 
         unpicked: unpicked {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_0 &kp RIGHT_ARROW>;
+            bindings = <&kp KP_NUMBER_0 &kp U &kp RIGHT_ARROW>;
             label = "UNPICKED";
         };
     };
@@ -79,7 +79,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans     &trans   &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans     &trans   &trans  &trans  &trans
-                        &trans  &trans  &to 1     &kp LEFT_ARROW  &unpicked  &picked
+                        &trans  &trans  &to 0     &kp LEFT_ARROW  &unpicked  &picked
             >;
         };
     };
