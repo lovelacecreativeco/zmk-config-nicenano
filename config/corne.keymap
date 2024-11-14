@@ -98,3 +98,22 @@
         };
     };
 };
+
+/ {
+    underglow {
+        compatible = "zmk,underglow";
+        chainable-led-count = <27>; // Set the LED string length to 27
+        color-off = <0x00 0x00 0x00>; // RGB for 'off' state (black)
+        
+        // Example color configuration (adjust as needed)
+        color-map = <
+            0xFF 0x00 0x00  // Red
+            0x00 0xFF 0x00  // Green
+            0x00 0x00 0xFF  // Blue
+            // Add additional RGB values for each LED in the strip if needed
+        >;
+        
+        // Enable effects if desired (remove/comment out if not needed)
+        rgb-ug-effect = "RGB_EFF"; // Example effect (adjust based on ZMK documentation)
+    };
+};
