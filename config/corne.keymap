@@ -9,6 +9,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// Specify the LED chain length for the LED strip
+&led_strip {
+    chain-length = <27>;  // Set this to the number of LEDs on each half of your keyboard
+};
+
 / {
     macros {
         picked: picked {
@@ -38,20 +43,6 @@
 
             label = "EMDASH";
         };
-    };
-
-    underglow {
-        compatible = "zmk,underglow";
-        label = "Underglow";
-        chainable-led-count = <27>; // Set the LED string length to 27
-        color-off = <0x00 0x00 0x00>; // RGB for 'off' state (black)
-
-        color-map = <
-            0xFF 0x00 0x00  // Red
-            0x00 0xFF 0x00  // Green
-            0x00 0x00 0xFF  // Blue
-            // Add additional RGB values for each LED in the strip if needed
-        >;
     };
 
     keymap {
