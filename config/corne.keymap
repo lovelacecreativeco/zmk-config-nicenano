@@ -24,6 +24,22 @@
             bindings = <&kp KP_NUMBER_0 &kp U &kp RIGHT_ARROW>;
             label = "UNPICKED";
         };
+
+        emdash: emdash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp U>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp LEFT_SHIFT>,
+                <&macro_tap>,
+                <&kp N2 &kp N0 &kp N1 &kp N4>;
+
+            label = "EMDASH";
+        };
     };
 
     keymap {
@@ -52,10 +68,10 @@
             //                    | GUI |     | ENT |   | SPC |     | ALT |
 
             bindings = <
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4     &kp N5           &kp NUMBER_6       &kp N7                           &kp N8     &kp N9        &kp N0     &kp BACKSPACE     &kp C_VOL_UP
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &to 0                            &to 3      &kp UP_ARROW  &trans     &kp C_PLAY_PAUSE  &kp C_VOL_DN
-&kp LSHFT     &kp LCTRL     &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG    &rgb_ug RGB_COLOR_HSB(79,96,52)  &kp LEFT   &kp DOWN      &kp RIGHT  &kp C_PREV        &kp C_NEXT
-                                             &kp LGUI         &kp RET          &trans             &trans                           &kp SPACE  &kp RALT
+&kp GRAVE   &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3     &kp NUMBER_4     &kp N5             &kp NUMBER_6                     &kp N7     &kp N8        &kp N9     &kp N0            &kp C_VOL_UP
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4       &emdash                          &to 3      &kp UP_ARROW  &trans     &kp C_PLAY_PAUSE  &kp C_VOL_DN
+&kp LSHFT   &kp LCTRL     &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_TOG    &rgb_ug RGB_COLOR_HSB(79,96,52)  &kp LEFT   &kp DOWN      &kp RIGHT  &kp C_PREV        &kp C_NEXT
+                                           &kp LGUI         &kp RET          &trans             &trans                           &kp SPACE  &kp RALT
             >;
         };
 
