@@ -17,26 +17,20 @@
 
 / {
     behaviors {
-        truenas_copy: truenas_copy {
+        ht_ctrl_c: ht_ctrl_c_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "TRUENAS_COPY";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
+            label = "Hold-Tap Ctrl+C";
             flavor = "tap-preferred";
-            tapping-term-ms = <600>;
-            hold-trigger-key-positions = <25 28>;
+            tapping-term-ms = <750>;
+            bindings = <&kp C>, <&kp C_INSERT>;
         };
 
-        truenas_paste: truenas_paste {
+        ht_ctrl_v: ht_ctrl_v_behavior {
             compatible = "zmk,behavior-hold-tap";
-            label = "TRUENAS_PASTE";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
+            label = "Hold-Tap Ctrl+V";
             flavor = "tap-preferred";
-            tapping-term-ms = <600>;
-            hold-trigger-key-positions = <25 29>;
+            tapping-term-ms = <750>;
+            bindings = <&kp V>, <&kp S_INSERT>;
         };
     };
 
