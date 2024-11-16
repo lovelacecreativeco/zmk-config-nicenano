@@ -52,11 +52,15 @@
         truenas_copy {
             bindings = <&kp LC(INSERT)>;
             key-positions = <25 28>;
+            timeout-ms = <750>;
+            layers = <0>;
         };
 
         truenas_paste {
             bindings = <&kp LS(INSERT)>;
             key-positions = <25 29>;
+            timeout-ms = <750>;
+            layers = <0>;
         };
     };
 
