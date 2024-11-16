@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // Specify the LED chain length for the LED strip
+
 &led_strip {
     chain-length = <27>;  // Set this to the number of LEDs on each half of your keyboard
 };
@@ -42,6 +43,20 @@
                 <&kp LEFT_ALT>;
 
             label = "EMDASH";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        truenas_copy {
+            bindings = <&kp LC(INSERT)>;
+            key-positions = <25 28>;
+        };
+
+        truenas_paste {
+            bindings = <&kp LS(INSERT)>;
+            key-positions = <25 29>;
         };
     };
 
