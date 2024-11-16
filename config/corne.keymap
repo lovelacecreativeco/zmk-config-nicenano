@@ -16,22 +16,27 @@
 };
 
 / {
-
     behaviors {
-        ht_ctrl_c: ht_ctrl_c {
+        truenas_copy: truenas_copy {
             compatible = "zmk,behavior-hold-tap";
-            label = "Hold-Tap Ctrl+C";
+            label = "TRUENAS_COPY";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <750>;
-            bindings = <&kp C>, <&kp C_INSERT>;
+            tapping-term-ms = <600>;
+            hold-trigger-key-positions = <25 28>;
         };
 
-        ht_ctrl_v: ht_ctrl_v {
+        truenas_paste: truenas_paste {
             compatible = "zmk,behavior-hold-tap";
-            label = "Hold-Tap Ctrl+V";
+            label = "TRUENAS_PASTE";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <750>;
-            bindings = <&kp V>, <&kp S_INSERT>;
+            tapping-term-ms = <600>;
+            hold-trigger-key-positions = <25 29>;
         };
     };
 
