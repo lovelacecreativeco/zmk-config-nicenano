@@ -16,24 +16,6 @@
 };
 
 / {
-    behaviors {
-        ht_ctrl_c: ht_ctrl_c_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Hold-Tap Ctrl+C";
-            flavor = "tap-preferred";
-            tapping-term-ms = <750>;
-            bindings = <&kp C>, <&kp C_INSERT>;
-        };
-
-        ht_ctrl_v: ht_ctrl_v_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Hold-Tap Ctrl+V";
-            flavor = "tap-preferred";
-            tapping-term-ms = <750>;
-            bindings = <&kp V>, <&kp S_INSERT>;
-        };
-    };
-
     macros {
         picked: picked {
             compatible = "zmk,behavior-macro";
