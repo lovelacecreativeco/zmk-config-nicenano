@@ -16,6 +16,25 @@
 };
 
 / {
+
+    behaviors {
+        ht_ctrl_c: ht_ctrl_c {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-Tap Ctrl+C";
+            flavor = "tap-preferred";
+            tapping-term-ms = <750>;
+            bindings = <&kp C>, <&kp C_INSERT>;
+        };
+
+        ht_ctrl_v: ht_ctrl_v {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-Tap Ctrl+V";
+            flavor = "tap-preferred";
+            tapping-term-ms = <750>;
+            bindings = <&kp V>, <&kp S_INSERT>;
+        };
+    };
+
     macros {
         picked: picked {
             compatible = "zmk,behavior-macro";
@@ -43,24 +62,6 @@
                 <&kp LEFT_ALT>;
 
             label = "EMDASH";
-        };
-    };
-
-    combos {
-        compatible = "zmk,combos";
-
-        truenas_copy {
-            bindings = <&kp LC(INSERT)>;
-            key-positions = <25 28>;
-            timeout-ms = <750>;
-            layers = <0>;
-        };
-
-        truenas_paste {
-            bindings = <&kp LS(INSERT)>;
-            key-positions = <25 29>;
-            timeout-ms = <750>;
-            layers = <0>;
         };
     };
 
