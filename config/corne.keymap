@@ -50,13 +50,13 @@
         hold_ctrl_insert: macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INSERT &kp LC>;
+            bindings = <&kp LC(C) &kp INSERT>;
         };
 
         hold_shift_insert: macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp INSERT &kp LS>;
+            bindings = <&kp LS(V) &kp INSERT>;
         };
     };
 
