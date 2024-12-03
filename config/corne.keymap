@@ -15,10 +15,6 @@
     chain-length = <27>;  // Set this to the number of LEDs on each half of your keyboard
 };
 
-&mt {
-    tapping-term-ms = <600>;
-};
-
 / {
     macros {
         picked: picked {
