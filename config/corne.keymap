@@ -47,13 +47,13 @@
     };
 
     behaviors {
-        hold_ctrl_insert: macro {
+        hold_ctrl_insert: hold_ctrl_insert {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(C) &kp INSERT>;
         };
 
-        hold_shift_insert: macro {
+        hold_shift_insert: hold_shift_insert {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(V) &kp INSERT>;
